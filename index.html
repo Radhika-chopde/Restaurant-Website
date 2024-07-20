@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavour Junction</title>
+    <style>
+        body {
+            background-image: url(image2.jpg);
+            background-size: cover;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 10% 90%;
+            grid-template-rows: 10% 90%;
+        }
+        #logo {
+            margin-left: 40px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            height: 90vh;
+            object-fit: cover;
+            padding-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        #navbar {
+            padding-top: 20px;
+            grid-row: 1/2;
+            grid-column: 2/3;
+            margin-left: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px
+        }
+        .navmenus {
+            padding: 10px;
+            position: relative;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: aliceblue;
+        }
+        .navmenus::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            /* Adjust the position of the underline */
+            height: 2px;
+            /* Initial height of the underline */
+            width: 0;
+            /* Initial width of the underline */
+            background-color: white;
+            /* Color of the underline */
+            transition: width 0.3s ease;
+            /* Transition effect */
+        }
+        .navmenus:hover::after {
+            width: 100%;
+            /* Expand the width of the underline on hover */
+        }
+        .image_slider {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            overflow: hidden;
+            /* Ensure images don't overflow */
+        }
+        .image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            /* Ensure the image fills the container without distortion */
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            height: 90%;
+            width: 95%;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            grid-template-rows: 50% 50%;
+        }
+        #about {
+            grid-column: 2/3;
+            color: aliceblue;
+            margin-top: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        #logo2 {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            margin-left: 40px;
+            height: 90vh;
+            object-fit: cover;
+            padding-top: 20px;
+        }
+        .image_slider2 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            border: 2px solid aliceblue;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            margin-right: 5%;
+            margin-bottom: 2%;
+            overflow: hidden;
+            /* Ensure images don't overflow */
+            padding-top: 7px;
+        }
+        .food-train {
+            white-space: nowrap;
+            animation: moveTrain 10s linear infinite;
+        }
+        .food-item {
+            display: inline-block;
+            height: 240px;
+            /* Adjust the height as needed */
+            width: 30%;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        @keyframes moveTrain {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .food-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <a href="index.html" class="navmenus">Home</a>
+            <a href="#about" class="navmenus">About</a>
+            <a href="events.html" class="navmenus">Events</a>
+            <a href="orderOnline.html" class="navmenus">Order Online</a>
+        </div>
+        <div>
+            <img src="FLAVOUR_JUNCTION__4_-removebg-preview.png" id="logo" style="display: inline;">
+        </div>
+        <div class="image_slider">
+            <div class="mySlides fade">
+                <img src="image1.jpeg" class="image">
+            </div>
+            <div class="mySlides fade">
+                <img src="image2.jpg" class="image">
+            </div>
+            <div class="mySlides fade">
+                <img src="image3.jpg" class="image">
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Flavour Junction! We are a premier restaurant offering delicious cuisine and exceptional dining experiences. Our doors are open to welcome you every day of the week.</p>
+            <p>Opening Hours:</p>
+            <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+            <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+        </div>
+        <img src="FLAVOUR_JUNCTION__4_-removebg-preview.png" id="logo2">
+        <div class="image_slider2">
+            <div class="food-train">
+                <img src="food1.jpg" class="food-item">
+                <img src="food2.jpg" class="food-item">
+                <img src="food3.jpg" class="food-item">
+                <img src="food4.jpg" class="food-item">
+                <img src="food5.jpg" class="food-item">
+                <img src="food6.jpg" class="food-item">
+                <img src="food7.jpeg" class="food-item">
+                <img src="food8.jpeg" class="food-item">
+            </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+</body>
+</html>

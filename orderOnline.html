@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online</title>
+    <style>
+        body {
+            background-image: url(image2.jpg);
+            color: aliceblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+        a{
+            padding: 20px;
+            border-radius: 5px;
+        }
+        a:hover{
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .menu {
+            width: 60%;
+        }
+
+        .menu h2 {
+            text-align: center;
+        }
+
+        .food-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(242, 242, 242, 0.7); 
+            color: black;
+        }
+
+        .food-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .food-item h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .food-item p {
+            margin: 5px 0;
+        }
+
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart {
+            width: 35%;
+            max-height: 70vh; /* Set maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            background-color: rgba(242, 242, 242, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            color: black; /* Changed font color */
+            margin-top: 7%;
+        }
+
+
+        .cart h2 {
+            text-align: center;
+        }
+
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-items li {
+            margin-bottom: 10px;
+        }
+
+        .checkout {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .total {
+            text-align: center;
+            margin-top: 10px;
+            color: black;
+        }
+
+        .options {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .options label {
+            margin-right: 10px;
+            color: black;
+        }
+
+        .table-number,
+        .address {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .table-number input,
+        .address input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: black;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Order Online</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="orderOnline.html" class="active">Order Online</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="menu">
+                <h2>Menu</h2>
+                <div class="food-item">
+                    <h3>Burger</h3>
+                    <p>₹250</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Pizza</h3>
+                    <p>₹350</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Sushi Veg</h3>
+                    <p>₹300</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Paneer Tikka</h3>
+                    <p>₹280</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Samosa</h3>
+                    <p>₹20</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Idli</h3>
+                    <p>₹40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Dosa</h3>
+                    <p>₹60</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Vada</h3>
+                    <p>₹30</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Veg Biryani</h3>
+                    <p>₹200</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Kulfi</h3>
+                    <p>₹80</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Jalebi</h3>
+                    <p>₹40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Lassi</h3>
+                    <p>₹60</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Chana Masala</h3>
+                    <p>₹120</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Bhature</h3>
+                    <p>₹30</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Samosa Chaat</h3>
+                    <p>₹50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Aloo Pakora and Onion Pakora</h3>
+                    <p>₹40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Kadhai Paneer</h3>
+                    <p>₹180</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <h3>Butter Naan</h3>
+                    <p>₹18</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+            <aside class="cart">
+                <h2>Cart</h2>
+                <ul class="cart-items">
+                </ul>
+                <div class="options">
+                    <label for="order-type">Order Type:</label>
+                    <select id="order-type" style="width: 50%; height: 30px; border-radius: 5px;">
+                        <option>--select--</option>
+                        <option value="dine-in">Dine In</option>
+                        <option value="order-online">Order Online</option>
+                    </select>
+                </div>
+                <div class="table-number">
+                    <label for="table-number">Table Number:</label>
+                    <input type="text" id="table-number">
+                </div>
+                <div class="address" style="display: none;">
+                    <label for="delivery-address">Delivery Address:</label>
+                    <input type="text" id="delivery-address">
+                </div>
+                <button class="submit-btn">Submit</button>
+                <div class="total" style="display: none;"></div>
+            </aside>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const orderTypeSelect = document.getElementById('order-type');
+        const tableNumberDiv = document.querySelector('.table-number');
+        const addressDiv = document.querySelector('.address');
+        const cartItemsList = document.querySelector('.cart-items');
+
+        orderTypeSelect.addEventListener('change', () => {
+            if (orderTypeSelect.value === 'dine-in') {
+                tableNumberDiv.style.display = 'block';
+                addressDiv.style.display = 'none';
+            } else if (orderTypeSelect.value === 'order-online') {
+                tableNumberDiv.style.display = 'none';
+                addressDiv.style.display = 'block';
+            }
+        });
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        function addToCart(event) {
+            const button = event.target;
+            const foodItem = button.parentElement;
+            const foodName = foodItem.querySelector('h3').textContent;
+            const foodPrice = foodItem.querySelector('p').textContent;
+
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `${foodName} - ${foodPrice}`;
+            
+            // Add remove button to cart item
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('remove-from-cart');
+            removeButton.addEventListener('click', removeFromCart);
+            cartItem.appendChild(removeButton);
+
+            cartItemsList.appendChild(cartItem);
+        }
+
+        function removeFromCart(event) {
+            const button = event.target;
+            const cartItem = button.parentElement;
+            cartItem.remove();
+        }
+
+        const submitBtn = document.querySelector('.submit-btn');
+        submitBtn.addEventListener('click', () => {
+            const orderType = orderTypeSelect.value;
+            const tableNumber = document.getElementById('table-number').value;
+            const deliveryAddress = document.getElementById('delivery-address').value;
+            const cartItems = document.querySelectorAll('.cart-items li');
+            let totalPrice = 0;
+            cartItems.forEach(item => {
+                const price = item.textContent.split(' - ')[1].replace('₹', '');
+                totalPrice += parseFloat(price);
+            });
+            const totalDiv = document.querySelector('.total');
+            if (orderType === 'dine-in') {
+                totalDiv.textContent = `Total Price for Table ${tableNumber}: ₹${totalPrice}`;
+            } else if (orderType === 'order-online') {
+                totalDiv.textContent = `Total Price for Delivery: ₹${totalPrice}`;
+            }
+            totalDiv.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
